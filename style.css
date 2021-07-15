@@ -1,0 +1,196 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+html{
+  font-size: 10px;
+}
+.add{
+  width: 85vw;
+  height: 80vh !important;
+  background: rgba(192, 192, 192, 0.4);
+  position: absolute;
+  top: 6rem;
+  left: 7%;
+  z-index: 100;
+  backdrop-filter: blur(50px);
+  box-shadow: 0 8px 32px 0 rgba(30,32,28,0.3);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-200%);
+  transition: transform 0.5s ease-in-out;
+  border: 1px solid transparent;
+}
+.add.active{
+  transform: translateY(0%);
+}
+.dropDown{
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.inputPart{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 4rem;
+}
+.Title,.List,.label{
+  width: 87%;
+  height: 4rem;
+  padding: 1rem;
+  outline: none;
+  border-radius: 1rem;
+  border: 1px solid grey;
+}
+.Title:focus,.List:focus,.label:focus{
+  outline: none;
+}
+.Title{
+  margin-top: 5rem;
+}
+.List,.label{
+  margin-top: 3rem;
+}
+.inputPart .updown{
+  position: absolute;
+  right: 4rem;
+  top: 50%;
+  font-size: 2.5rem;
+  transform: translateY(60%);
+  transition: transform 0.3s ease-in-out;
+}
+.updown.active{
+  transform: translateY(30%) rotateZ(180deg);
+}
+::-webkit-input-placeholder,input{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.labelContent{
+  margin-top: 2.3rem;
+  width: 87%;
+  background: white;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease-in-out;
+}
+.labelContent.active{
+  height: 15rem;
+}
+.h1,.h2,.h3,.h4{
+  margin-top: 0.9rem;
+  margin-left: 1.5rem;
+}
+.btn{
+  width: 100%;
+  height: 5rem;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.cancel,.submit{
+  width: 11rem;
+  height: 4rem;
+  border-radius: 1rem;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+}
+.cancel{
+  background: red;
+}
+.submit{
+  background:#0788FF;
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden !important;
+}
+.addBtn{
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,225,225,0.9);
+  display: grid;
+  place-items: center;
+  font-size: 5rem;
+  font-weight: normal;
+  box-shadow: 0 8px 32px 0 rgba(30,32,28,0.3);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+.heading{
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 1rem;
+}
+.mainStore{
+  width: 100vw;
+  overflow: hidden;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.listOption{
+  width: 88vw;
+  height: 7rem;
+  background:#00A2FF;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  border-radius: 1rem;
+  color: white;
+}
+.firstPart,.secondPart{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.delete{
+  width: 3rem;
+  height: 3rem;
+  background: red;
+  color: white;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  z-index: 10;
+}
+.labelShow{
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+.TitleShow,.ListShow{
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.TitleShow{
+  width: 40%;
+}
+.ListShow{
+  width: 60%;
+}
